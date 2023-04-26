@@ -1,9 +1,6 @@
 package com.works.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -15,6 +12,7 @@ public class Customer {
     private Long cid;
 
     private String name;
+    @Column(unique = true)
     private String email;
 
 
