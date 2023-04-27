@@ -28,10 +28,11 @@ public class CustomerRestController {
     public ResponseEntity save(@RequestBody Customer customer) {
         Customer cx = customerService.save(customer);
         if ( cx != null ) {
-            return new ResponseEntity(cx, HttpStatus.OK);
+            // return new ResponseEntity(cx, HttpStatus.OK);
         }else {
-            return new ResponseEntity(cx, HttpStatus.BAD_REQUEST);
+            // return new ResponseEntity(cx, HttpStatus.BAD_REQUEST);
         }
+        return new ResponseEntity(cx, HttpStatus.OK);
     }
 
 
